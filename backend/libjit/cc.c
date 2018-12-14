@@ -4,21 +4,24 @@
 #include <jit/jit.h>
 #include <jit/jit-dump.h>
 #include "defs.h"
+#include "map.h"
 #include "absyn.h"
 #include "vm.h"
+#include "env.h"
+//#include "operator.h"
 #include "shreduler_private.h"
 #include "mpool.h"
-#include "jitter.h"
-#include "cc.h"
 #include "sig.h"
-#include "code/func.h"
+#include "../include/instr.h"
+#include "jitter.h"
 #include "thread.h"
 #include "backend.h"
-#include "instr.h"
+#include "cc.h"
 #include "code.h"
 #include "code_private.h"
 #include "ctrl.h"
 #include "ctrl_private.h"
+#include "code/func.h"
 
 jit_function_t get_jit_func(CC cc, const m_str s) {
   Map m = &cc->jvtable;

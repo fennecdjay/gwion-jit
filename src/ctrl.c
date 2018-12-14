@@ -2,8 +2,10 @@
 #include <string.h>
 #include <jit/jit.h> // labels
 #include "defs.h"
-#include "absyn.h"
 #include "map.h"
+#include "absyn.h"
+#include "vm.h"
+#include "instr.h"
 #include "operator.h"
 #include "ctrl.h"
 

@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <jit/jit.h>
-#include "gwjit_common.h"
+#include "defs.h"
 #include "map.h"
 #include "symbol.h"
+#include "gwjit_common.h"
 
 ANN void sig_ini(Map m) {
   map_init(m);

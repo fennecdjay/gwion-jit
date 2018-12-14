@@ -2,6 +2,7 @@
 #include <string.h>
 #include <pthread.h>
 #include "defs.h"
+#include "map.h"
 #include "absyn.h"
 #include "mpool.h"
 #include "type.h"
@@ -74,7 +75,7 @@ ANN static m_bool flow(JitThread jt, Q q) {
         ctrl(byte, q->ctrl);
     }
   } while((byte = ctrl_run(q->ctrl, v)));
-  return 1;
+  return GW_OK;
 }
 
 ANN static Instr get_instr(const JitThread jt, const Instr instr) {
